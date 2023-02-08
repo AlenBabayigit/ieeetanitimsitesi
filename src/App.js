@@ -8,6 +8,7 @@ import CommitteePage from './components/committees/CommitteePage';
 import committees from './components/committees/committees.json';
 import DeveloperTeam from './components/DeveloperTeam';
 import ComingSoon from './components/ComingSoon';
+import Crew from './components/Crew';
 
 function App() {
   return (
@@ -16,9 +17,12 @@ function App() {
       <Routes>
         <Route path='/' element={<Main />} /> 
         <Route path='/developers' element={<DeveloperTeam />} /> 
-        <Route path='/soon' element={<ComingSoon />} /> 
+        <Route path='/ekibimiz' element={<Crew />} /> 
         <Route path="/aess" element={<CommitteePage
           props={committees.aess}
+        />} />
+        <Route path="/comsoc" element={<CommitteePage
+          props={committees.comsoc}
         />} />
 
         <Route path="/cs" element={<CommitteePage
@@ -29,16 +33,8 @@ function App() {
           props={committees.ea}
         />} />
 
-        <Route path="/edsoc" element={<CommitteePage
-          props={committees.edsoc}
-        />} />
-
         <Route path="/embs" element={<CommitteePage
           props={committees.embs}
-        />} />
-
-        <Route path="/enet" element={<CommitteePage
-          props={committees.enet}
         />} />
 
         <Route path="/pes" element={<CommitteePage
